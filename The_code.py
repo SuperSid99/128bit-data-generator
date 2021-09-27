@@ -11,12 +11,7 @@ if __name__ == "__main__":
     def generate_datapoint():
         data_point = []
         for _ in range(128):
-            z = random.randint(0, 1)
-            if z == 1:
-                bit = 1
-            else:
-                bit = 0
-            data_point.append([bit])
+            data_point.append([random.randint(0, 1)])
         return data_point
 
     with open("ip_data_train.csv", "w", encoding="UTF8", newline="") as f:
